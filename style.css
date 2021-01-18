@@ -2,21 +2,29 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: black;
+    background-image: url(starry-night-sky.jpg);
+    background-size: 60%;
+    justify-content: center;
 }
-
-
-.main {
+/*
+h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 3px solid red;
+    color: blue;
     width: 100vw;
     height: 100vh;
-   
-    
+    display: none;
 }
 
+img {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation: img;
+    animation-delay: ;
+}
+*/
 .container {
     position: relative;
     margin: auto;
@@ -34,6 +42,8 @@ body {
     top: -100px;
     transform-origin: 50% 100%;
     animation: crawl 60s linear;
+    animation-delay: 1s;
+    opacity: 0;
 }
 
 p {
@@ -43,11 +53,23 @@ p {
     font-weight: 800;
     text-align: justify;
 }
-
+/*
+@keyframes img {
+    0% {
+        transform: scale(100%);
+        display: flex;
+    }
+    100% {
+        transform: scale(10%);
+        display: none;
+    }
+}
+*/
 @keyframes crawl {
     0% {
-      top: 0;
-      transform: rotateX(20deg) translateZ(0);
+        opacity: 1;
+        top: 0;
+        transform: rotateX(20deg) translateZ(0);
     }
     100% { 
       top: -6000px;
